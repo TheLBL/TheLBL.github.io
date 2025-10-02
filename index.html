@@ -6,7 +6,7 @@ header:
   overlay_color: "#5e616c"
   overlay_image: /assets/images/DSC_7306.png
 excerpt: >
-  HELLO WORLD! A flexible two-column Jekyll theme. Perfect for building personal sites, blogs, and portfolios.<br />
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam<br />
 feature_row:
   - image_path: /assets/images/DSC_7652.png
     alt: "Fotography"
@@ -42,7 +42,27 @@ gallery:
     url: /assets/images/DSC_7306.png
     alt: "Bild 3"
     title: "Bild Nummer 3"
+  - image_path: /assets/images/DSC_7306.png
+    url: /assets/images/DSC_7306.png
+    alt: "Bild 1"
+    title: "Bild Nummer 1"
+  - image_path: /assets/images/DSC_7306.png
+    url: /assets/images/DSC_7306.png
+    alt: "Bild 2"
+    title: "Bild Nummer 2"
+  - image_path: /assets/images/DSC_7306.png
+    url: /assets/images/DSC_7306.png
+    alt: "Bild 3"
+    title: "Bild Nummer 3"
+  
 ---
 {% include custom_intro.html %}
-{% include feature_row %}
+<!--{% include feature_row %}-->
+{% include custom_middle.html %}
+<div style="height: 2px; background-color: #ccc; margin: 1rem 10rem;"></div>
+<br>
+{% include custom_services.html %}
+<br>
+<div style="height: 2px; background-color: #ccc; margin: 1rem 10rem;"></div>
+<h1 style="text-align: center; border:none;">Gallerie:</h1>
 {% include gallery %}

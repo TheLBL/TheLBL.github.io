@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Abschnitt mit Bildern und Text</title>
+<style>
+  .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .row.reverse {
+    flex-direction: row-reverse;
+  }
+  .image-container {
+    flex: 0 0 350px;
+    margin: 0 1rem;
+  }
+  .image-container img {
+    width: 350px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25); /* Schatten */
+    /*transition: transform 0.3s ease; /* sanfte Animation bei Hover */
+    opacity: 0;
+    transition: opacity 1s ease, transform 1.6s ease;
+  }
+  .image-container img:hover {
+    /*transform: scale(1.05);*/
+  }
+  .image-container img.visible {
+  opacity: 1;
+  transform: translateX(0);
+  }
+  .text-container {
+    flex: 1;
+    max-width: 600px;
+    /*background-color: #ffffff; /* hellblauer Hintergrund */
+    padding: 1.5rem 2rem;
+    /*border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);*/
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.6s ease, transform 1.6s ease;
+  }
+  .text-container h2 {
+    margin-bottom: 0.5rem;
+  }
+  .text-container.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+</style>
+</head>
+<body>
+
+<section>
+  <div class="row">
+    <div class="image-container">
+      <img src="/assets/images/DSC_8120.png" alt="Bild 1">
+    </div>
+    <div class="text-container">
+      <h2>Titel 1</h2>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+  </div>
+
+  <div class="row reverse">
+    <div class="image-container">
+      <img src="/assets/images/DSC_8120.png"alt="Bild 2">
+    </div>
+    <div class="text-container">
+      <h2>Titel 2</h2>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="image-container">
+      <img src="/assets/images/DSC_8120.png" alt="Bild 3">
+    </div>
+    <div class="text-container">
+      <h2>Titel 3</h2>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+  </div>
+</section>
+<script src="/assets/js/custom_scroll.js"></script>
+</body>
+</html>
