@@ -18,22 +18,25 @@
     margin: 0 1rem;
   }
   .image-container img {
-    width: 350px;
-    height: 600px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.25); /* Schatten */
-    /*transition: transform 0.3s ease; /* sanfte Animation bei Hover */
-    opacity: 0;
-    transition: opacity 1s ease, transform 1.6s ease;
+  width: 350px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.3s ease;
+  transform: translateX(0px) scale(1); /* außerhalb des Bildschirms oder leicht versetzt */
   }
-  .image-container img:hover {
-    /*transform: scale(1.05);*/
-  }
+
   .image-container img.visible {
-  opacity: 1;
-  transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0) scale(1);
   }
+
+  .image-container img.visible:hover {
+    transform: translateX(0) scale(1.15);
+  }
+
   .text-container {
     flex: 1;
     max-width: 600px;
@@ -52,6 +55,29 @@
   opacity: 1;
   transform: translateX(0);
 }
+
+.image-container video {
+  width: 350px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  
+  opacity: 0;
+  transform: translateX(0px) scale(1);
+  transition: opacity 1s ease, transform 0.3s ease;
+  pointer-events: auto;
+}
+
+.image-container video.visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+.image-container video.visible:hover {
+  transform: translateX(0) scale(1.05);
+}
+
 </style>
 </head>
 <body>
@@ -62,28 +88,50 @@
       <img src="/assets/images/DSC_8120.png" alt="Bild 1">
     </div>
     <div class="text-container">
-      <h2>Titel 1</h2>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      <h2>Momente einfangen</h2>
+      <p>Fotografie bedeutet, echte Momente einzufangen und Werte sichtbar zu machen. So entsteht eine überzeugende visuelle Präsenz, die Ihre Botschaft klar transportiert und nachhaltig Eindruck hinterlässt.</p>
     </div>
   </div>
 
   <div class="row reverse">
     <div class="image-container">
-      <img src="/assets/images/DSC_8120.png"alt="Bild 2">
+      <img src="/assets/images/Vid1.png"alt="Bild 2">
     </div>
     <div class="text-container">
-      <h2>Titel 2</h2>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      <h2>Mittendrin sein</h2>
+      <p>Mit moderner Videografie sind Sie immer mittendrin. Vom packenden Imagefilm bis zu dynamischen Drohnenaufnahmen entstehen bewegte Bilder, die Ihr Unternehmen authentisch präsentieren und Zuschauer hautnah erleben lassen.</p>
     </div>
   </div>
 
+
+<!--   <div class="image-container" style="width: 350px; height: 600px; border-radius: 8px; overflow: hidden;">
+    <img class="preview" src="/assets/images/Vid1.png" alt="Vorschaubild"
+      style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block;">
+    <img class="gif" src="/assets/videos/Vid1_1.gif" alt="Animiertes GIF"
+      style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: none; position: absolute; top: 0; left: 0;">
+  </div>
+  <script>
+    const container = document.querySelector('.image-container');
+    const preview = container.querySelector('.preview');
+    const gif = container.querySelector('.gif');
+
+    container.addEventListener('mouseenter', () => {
+      preview.style.display = 'none';
+      gif.style.display = 'block';
+    });
+    container.addEventListener('mouseleave', () => {
+      preview.style.display = 'block';
+      gif.style.display = 'none';
+    });
+  </script> -->
+
   <div class="row">
     <div class="image-container">
-      <img src="/assets/images/DSC_8120.png" alt="Bild 3">
+      <img src="/assets/images/Str1.JPG" alt="Bild 3">
     </div>
     <div class="text-container">
-      <h2>Titel 3</h2>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      <h2>Live dabei sein</h2>
+      <p>Professionelles Streaming bringt Ihr Publikum direkt zu Ihrem Event. Präsentationen, Meetings und Veranstaltungen werden live übertragen, ermöglichen echte Interaktion und machen Ihr Unternehmen überall und jederzeit erlebbar.</p>
     </div>
   </div>
 </section>
