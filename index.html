@@ -1,41 +1,3 @@
-<head>
-  <!-- andere Kopf-Inhalte wie meta, title, links ... -->
-
-  <style>
-    .custom-intro {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2rem;
-    }
-
-    .custom-intro img {
-      width: 350px;
-      height: 350px;
-      object-fit: cover;
-      margin-right: 1.5rem;
-    }
-
-    @media (max-width: 600px) {
-      .custom-intro {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .custom-intro img {
-        width: 100%;
-        height: auto;
-        margin-right: 0;
-        margin-bottom: 1rem;
-        border-radius: 8px;
-      }
-
-      .custom-intro .intro-text {
-        width: 100%;
-      }
-    }
-  </style>
-</head>
-
 ---
 layout: splash
 permalink: /
@@ -94,6 +56,7 @@ gallery:
     title: "Bild Nummer 3"
   
 ---
+
 {% include custom_intro.html %}
 <!--{% include feature_row %}-->
 {% include custom_middle.html %}

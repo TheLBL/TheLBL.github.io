@@ -7,6 +7,41 @@
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+
+    <style>
+      .custom-intro {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      .custom-intro img {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        margin-right: 1.5rem;
+      }
+
+      @media (max-width: 600px) {
+        .custom-intro {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .custom-intro img {
+          width: 100%;
+          height: auto;
+          margin-right: 0;
+          margin-bottom: 1rem;
+          border-radius: 8px;
+        }
+
+        .custom-intro .intro-text {
+          width: 100%;
+        }
+      }
+    </style>
+    
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" dir="{% if site.rtl %}rtl{% else %}ltr{% endif %}">
