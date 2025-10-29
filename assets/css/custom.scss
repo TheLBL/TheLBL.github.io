@@ -1,0 +1,16 @@
+@media (max-width: 600px) {
+  .custom-intro {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .custom-intro img {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+  .custom-intro .intro-text {
+    width: 100%;
+  }
+}
